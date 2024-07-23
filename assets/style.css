@@ -42,3 +42,7 @@ body
  {
   color: green;
  }
+.card h1
+{
+  cursor: default;
+}
