@@ -95,3 +95,4 @@ function renderCategory() {
   let Category = [...new Set(array.map((index) => index.cat))]
   console.log(Category)
 }
+renderCategory()
