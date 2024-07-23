@@ -1,98 +1,107 @@
 let array = [
   {
-    name: 'burger one',
+    name: "burger one",
     price: 25,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'burger tow',
+    name: "burger tow",
     price: 30,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'burger three',
+    name: "burger three",
     price: 35,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'burger four',
+    name: "burger four",
     price: 40,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'burger five',
+    name: "burger five",
     price: 45,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'burger sex',
+    name: "burger sex",
     price: 50,
-    cat: 'burgers',
+    cat: "burgers",
   },
   {
-    name: 'pizaa one',
+    name: "pizaa one",
     price: 25,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'pizaa tow',
+    name: "pizaa tow",
     price: 30,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'pizaa three',
+    name: "pizaa three",
     price: 35,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'pizaa four',
+    name: "pizaa four",
     price: 40,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'pizaa five',
+    name: "pizaa five",
     price: 45,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'pizaa sex',
+    name: "pizaa sex",
     price: 50,
-    cat: 'pizza',
+    cat: "pizza",
   },
   {
-    name: 'drinks one',
+    name: "drinks one",
     price: 25,
-    cat: 'drinks',
+    cat: "drinks",
   },
   {
-    name: 'drinks tow',
+    name: "drinks tow",
     price: 30,
-    cat: 'drinks',
+    cat: "drinks",
   },
   {
-    name: 'drinks three',
+    name: "drinks three",
     price: 35,
-    cat: 'drinks',
+    cat: "drinks",
   },
   {
-    name: 'drinks four',
+    name: "drinks four",
     price: 45,
-    cat: 'drinks',
+    cat: "drinks",
   },
   {
-    name: 'drinks five',
+    name: "drinks five",
     price: 50,
-    cat: 'drinks',
+    cat: "drinks",
   },
   {
-    name: 'drinks sex',
+    name: "drinks sex",
     price: 55,
-    cat: 'drinks',
+    cat: "drinks",
   },
-]
-let cats = []
+];
 function renderCategory() {
-  let Category = [...new Set(array.map((index) => index.cat))]
-  console.log(Category)
+  let cats = [];
+  cats = Object.groupBy(array, ({ cat }) => cat);
+
+  if (cats.length != 0) {
+    console.log("render");
+  } else {
+    console.log("do not render");
+  }
 }
+<<<<<<< HEAD
 renderCategory()
+=======
+
+>>>>>>> a6df02225b1393271e3bbabe41379ad5d5f35925
