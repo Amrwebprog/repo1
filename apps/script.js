@@ -8,7 +8,6 @@ let array = [
     name: 'burger tow',
     price: 30,
     cat: 'burgers',
-    
   },
   {
     name: 'burger three',
@@ -96,4 +95,3 @@ function renderCategory() {
   let Category = [...new Set(array.map((index) => index.cat))]
   console.log(Category)
 }
-renderCategory()
