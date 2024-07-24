@@ -4,6 +4,7 @@ let array = [
     price: 25,
     cat: 'burgers',
   },
+  
   {
     name: 'burger tow',
     price: 30,
@@ -94,6 +95,10 @@ let workSpace = document.querySelector('#work-place')
 
 let cats = []
 let arr = Object.groupBy(array, ({ cat }) => cat)
+let fatora = []
+let menue = false
+let fatoraDiv = document.querySelector('.fatora')
+let overlay = document.querySelector('.overlay')
 
 function renderCategory() {
   workSpace.innerHTML = ''
@@ -170,9 +175,50 @@ function products(cat) {
               />
 
               <h1>${el.name}</h1>
+              <h2>${el.price}</h2>
+              <button class="rounded" onclick="addToFatora('${el.name}','${
+      el.cat
+    }' ,${index + 1})">add it</button>
+
             </div>
           </div>
 
          `
   })
+}
+function addToFatora(product_Name, product_cat, product_img) {
+  /*  let fatoraArray = arr.forEach((elem, index) => {}) */
+  let fatoraArray = arr[product_cat].filter((elem, index) => {
+    return elem.name === product_Name && elem.cat === product_cat
+  })
+
+  fatoraArray != 0 ? fatora.push(fatoraArray) : null
+  console.log(fatoraArray)
+
+  sideMenue(fatoraArray, product_img)
+}
+function sideMenue(fatoraArray, product_img) {
+  fatoraDiv.innerHTML = ``
+  menue = !menue
+  if (menue) {
+    fatoraArray.forEach((elem, index) => {
+      fatoraDiv.innerHTML = `
+
+    <div class="side-menue p-3 d-flex flex-row gap-1 ">
+    <div class=" d-flex flex-column justify-content-center h-100">
+    <div class="line"> </div>
+    </div>
+      <div class="d-flex flex-column justify-content-center bg-info p-3">
+      <img class="col-12" src="assets/img/${elem.cat + product_img}.jpg">
+      <h1>${elem.price}</h1>
+
+      </div>
+    </div>
+
+    `
+    })
+    overlay.classList.replace('d-none', 'd-block')
+  } else {
+    overlay.classList.replace('d-block', 'd-none')
+  }
 }

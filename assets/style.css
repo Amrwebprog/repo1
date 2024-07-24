@@ -6,7 +6,8 @@
 }
 body
 {
-    background-color: rgb(241, 241, 241);
+  height:100vh ;
+ background-color: rgb(241, 241, 241);
 }
 .bg
 {
@@ -222,4 +223,22 @@ body
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+.fatora
+{
+  top: 300px !important;
+  width: 20% !important;
+  z-index: 200 !important;
+}
+.line
+{
+  background-color: white;
+  height: 80px;
+  width: 2px;
+}
+.overlay
+{
+ z-index: 100 !important;
+  background-color: rgba(0, 0, 0, 0.404)
+  !important;
 }
