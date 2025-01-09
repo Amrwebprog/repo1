@@ -287,7 +287,7 @@ function removeqty(product_img) {
        <h2>${qty}</h2>
        <button id="button" class="col-3" onclick="Addqty(${product_img})">+</button>
       </div>
-      <h2>${elem.price * qty}</h2>
+      <h2>${elem.price * qty }</h2>
 
       <button class="btn btn-warning" onclick="addItTovechile()"> Add it To bill </button>
       </div>
@@ -312,8 +312,8 @@ function Bill() {
         <img src="./assets/img/.jpg" alt="" />
         <h1>${elem.name}</h1>
         <h5>${elem.price}</h5>
-        <h5>${elem.qty}</h5>
-        <h5>${elem.originalPrice}</h5>
+        <h5>${elem.qty || 'N/A'}</h5>
+        <h5>${elem.originalPrice || 'N/A'}</h5>
       </div>
        `
   })
